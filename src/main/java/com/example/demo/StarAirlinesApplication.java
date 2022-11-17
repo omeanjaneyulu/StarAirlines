@@ -5,6 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
+
+
+@ComponentScan
+@SpringBootApplication
+public class StarAirlinesApplication extends SpringBootServletInitializer {
+=======
 @ComponentScan
 @SpringBootApplication
 public class StarAirlinesApplication extends SpringBootServletInitializer{
@@ -13,9 +19,4 @@ public class StarAirlinesApplication extends SpringBootServletInitializer{
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(StarAirlinesApplication.class);
 	}
-
-	public static void main(String[] args) {
-		SpringApplication.run(StarAirlinesApplication.class, args);
-	}
-
 }
